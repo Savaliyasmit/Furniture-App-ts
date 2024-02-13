@@ -13,6 +13,8 @@ const port :number | undefined | any = Number(process.env.PORT || 3000)
 app.use(morgan("dev"));
 app.use(express.json());
 
+app.use('/images', express.static('images'));
+
 // base route
 app.use('/api/v1/users',UserRouter)
 app.use('/api/v1/admin',ProductRouter)
