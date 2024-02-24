@@ -8,11 +8,10 @@ import { connectDB } from "./db/db";
 dotenv.config()
 
 const app = express()
-const port :number | undefined | any = Number(process.env.PORT || 3000)
+const port :number | undefined | null = Number(process.env.PORT || 3000)
 
 app.use(morgan("dev"));
 app.use(express.json());
-
 app.use('/images', express.static('images'));
 
 // base route
