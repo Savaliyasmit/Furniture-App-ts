@@ -23,5 +23,5 @@ connectDB()
 .then(()=>{console.log("DB conncted")})
 .catch((error)=>{console.log("DB failed to connect",error)})
 
-app.listen(port,()=>console.log(`server conncted localhost:${port}`,))
+app.listen(port,()=>console.log(`server conncted localhost:${port}`))
 
