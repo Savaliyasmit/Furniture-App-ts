@@ -8,7 +8,7 @@ export default class UserService {
     return await userCollection.create<IUser>(body);
   };
   getUser = async (body: any) => {
-    return await userCollection.findOne<IUser>(body).lean()
+    return await userCollection.findOne<IUser>(body)
   };
  
   userUpdate = async (id: any, body: any) => {
@@ -16,7 +16,7 @@ export default class UserService {
   };
   
   getProduct = async (body: any) => {
-    return await productCollection.findOne<IProduct>(body).lean()
+    return await productCollection.findOne<IProduct>(body)
   };
 
    getPopularProduct = async () => {
